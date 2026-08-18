@@ -1,7 +1,7 @@
 // Date: Thu Aug 18 2026
 
 // Project: Review The Book Rust Programming Language
-// Goal: ...
+// Goal: Using Vector
 // Dependency: Without dependency
 
 // rustc 1.100.0-nightly (34baba539 2026-08-16)
@@ -28,6 +28,22 @@
 
 fn main() {
     println!("\n");
+
+    let mut number_vec = Vec::new();
+
+    let my_range = 0..10;
+
+    for item in my_range {
+        number_vec.push(item);
+    }
+
+    let index_file = number_vec.get(5);
+    let result = match index_file {
+        Some(num) => num,
+        None => panic!("Error: there is no number ..."),
+    };
+
+    println!("value of index five is: {}", result);
 
     println!("\nThe End ...\n");
 }
