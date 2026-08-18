@@ -1,7 +1,7 @@
 // Date: Thu Aug 18 2026
 
 // Project: Review The Book Rust Programming Language
-// Goal: Using struct
+// Goal: ...
 // Dependency: Without dependency
 
 // rustc 1.100.0-nightly (34baba539 2026-08-16)
