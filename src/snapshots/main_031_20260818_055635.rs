@@ -29,5 +29,25 @@
 fn main() {
     println!("\n");
 
+    let mut num_vec = Vec::new();
+
+    let my_range: std::ops::Range<u32> = 10..20;
+
+    for item in my_range {
+        num_vec.push(item);
+    }
+
+    for item in &num_vec {
+        println!("{} ", item);
+    }
+
+    println!("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+    let index_one = &num_vec[1];
+    let index_five = &num_vec[5];
+
+    println!("value of index one is: {}", index_one);
+    println!("value of index two is: {}", index_five);
+
     println!("\nThe End ...\n");
 }
