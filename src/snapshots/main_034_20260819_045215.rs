@@ -29,5 +29,25 @@
 fn main() {
     println!("\n");
 
+    let mut raphael: Raphael = Raphael {
+        code_one: 120,
+        code_two: 300,
+    };
+
+    println!("value of code one is: {}", raphael.code_one);
+    println!("value of code two is: {}", raphael.code_two);
+
+    // no need to mention &mut, compiler borrow it automatically
+    (&mut raphael).code_one = 360;
+    (&mut raphael).code_two = 960;
+
+    println!("value of code one is: {}", raphael.code_one);
+    println!("value of code two is: {}", raphael.code_two);
+
     println!("\nThe End ...\n");
+}
+
+struct Raphael {
+    code_one: u32,
+    code_two: u32,
 }
