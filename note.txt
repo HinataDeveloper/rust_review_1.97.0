@@ -1,3 +1,9 @@
+- extracting numbers from a text.
+- join multiple phrase.
+- removing a word from a phrase.
+----------------------------------------------
+
+
 Friedrich Nietzsche
 Philosopher and writer
 
