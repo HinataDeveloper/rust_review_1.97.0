@@ -1,7 +1,7 @@
 // Date: Thu Aug 20 2026
 
 // Project: Review The Book Rust Programming Language
-// Goal: ...
+// Goal: How to use HashMap
 // Dependency: Without dependency
 
 // rustc 1.100.0-nightly (34baba539 2026-08-16)
@@ -26,8 +26,18 @@
 
 // rustup 1.29.0 (28d1352db 2026-03-05)
 
+use std::collections::HashMap;
+
 fn main() {
     println!("\n");
+
+    let mut no_name = HashMap::new();
+
+    no_name.insert("Blue", 100);
+    no_name.insert("Red", 150);
+    no_name.insert("Green", 301);
+
+    println!("value of no_name is: {:?}", no_name);
 
     println!("\nThe End ...\n");
 }
