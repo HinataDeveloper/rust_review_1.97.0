@@ -1,7 +1,7 @@
 // Date: Thu Aug 21 2026
 
 // Project: Review The Book Rust Programming Language
-// Goal: ...
+// Goal: How to use HashMap : Remove Data
 // Dependency: Without dependency
 
 // rustc 1.100.0-nightly (8925ea358 2026-08-20)
@@ -26,8 +26,28 @@
 
 // rustup 1.29.0 (28d1352db 2026-03-05)
 
+use std::collections::HashMap;
+
 fn main() {
     println!("\n");
+
+    let mut raphael: HashMap<String, i32> = HashMap::new();
+
+    raphael.insert(String::from("Albert"), 321);
+    raphael.insert(String::from("Robert"), 973);
+    raphael.insert(String::from("Daniel"), 1023);
+    raphael.insert(String::from("Samuel"), 7355);
+
+    for (key, value) in &raphael {
+        println!("Key:{}, Value:{}", key, value);
+    }
+
+    println!("removeing Robert ...");
+    raphael.remove(&String::from("Robert"));
+
+    for (key, value) in &raphael {
+        println!("Key:{}, Value:{}", key, value);
+    }
 
     println!("\nThe End ...\n");
 }
