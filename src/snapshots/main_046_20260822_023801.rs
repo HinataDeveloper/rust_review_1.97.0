@@ -1,7 +1,7 @@
 // Date: Thu Aug 22 2026
 
 // Project: Review The Book Rust Programming Language
-// Goal: ...
+// Goal: How to use HashMap: Counting words
 // Dependency: Without dependency
 
 // rustc 1.100.0-nightly (8925ea358 2026-08-20)
@@ -26,8 +26,27 @@
 
 // rustup 1.29.0 (28d1352db 2026-03-05)
 
+use std::collections::HashMap;
+
 fn main() {
     println!("\n");
+
+    let message = String::from(
+        "Rust is a very fast and relible programming language and is very efficient for memory safty.",
+    );
+
+    let mut analyze = HashMap::new();
+
+    for item in message.split_whitespace() {
+        println!("{}", item);
+        let counter = analyze.entry(item).or_insert(0);
+        *counter += 1;
+    }
+
+    println!("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    for (key, value) in &analyze {
+        println!("Key:{}, Value:{}", key, value);
+    }
 
     println!("\nThe End ...\n");
 }
